@@ -1,0 +1,80 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>News</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ entity.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Mediafile</th>
+                <td>{{ entity.mediafile }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ entity.date|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ entity.note }}</td>
+            </tr>
+            <tr>
+                <th>Showtitre</th>
+                <td>{{ entity.showTitre }}</td>
+            </tr>
+            <tr>
+                <th>Showdescription</th>
+                <td>{{ entity.showDescription }}</td>
+            </tr>
+            <tr>
+                <th>Showdate</th>
+                <td>{{ entity.showDate }}</td>
+            </tr>
+            <tr>
+                <th>Shownote</th>
+                <td>{{ entity.showNote }}</td>
+            </tr>
+            <tr>
+                <th>Showtitreonhover</th>
+                <td>{{ entity.showTitreOnHover }}</td>
+            </tr>
+            <tr>
+                <th>Showdescriptiononhover</th>
+                <td>{{ entity.showDescriptionOnHover }}</td>
+            </tr>
+            <tr>
+                <th>Showdateonhover</th>
+                <td>{{ entity.showDateOnHover }}</td>
+            </tr>
+            <tr>
+                <th>Shownoteonhover</th>
+                <td>{{ entity.showNoteOnHover }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('actualites_admin') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('actualites_admin_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

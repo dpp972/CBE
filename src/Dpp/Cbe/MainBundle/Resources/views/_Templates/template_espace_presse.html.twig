@@ -1,0 +1,29 @@
+{% extends 'DppCbeMainBundle:_Bases:base_main_grayscale.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset( 'cbe/css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset( 'cbe/css/rubrique_espace_presse.css') }}" />
+{% endblock %}
+
+
+{% block body %}
+    <div class="tpl_default">
+
+        <div id="bg_shadow"></div>
+
+        {{ include('DppCbeMainBundle:_Components:main_title.html.twig') }}
+
+        {{ include('DppCbeMainBundle:_Components:main_navbar.html.twig') }}
+
+        {#TODO : condition Workflow#}
+
+        <section class="container_abs  content-section">
+            <div class="content_handler">
+                <div class="content_wrapper">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

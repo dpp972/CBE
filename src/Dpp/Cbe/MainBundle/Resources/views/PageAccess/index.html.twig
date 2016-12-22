@@ -1,0 +1,143 @@
+{% extends 'DppCbeMainBundle:_Templates:template_home.html.twig' %}
+
+{% block title %}CBE Accueil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" href="{{ asset( 'sliders/nivo_slider/css/themes/dark/dark.css') }}" type="text/css" media="screen" />#}
+    <link rel="stylesheet" href="{{ asset( 'sliders/nivo_slider/css/nivo_theme_cbe.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ asset( 'sliders/nivo_slider/css/nivo_slider_cbe.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ asset( 'cbe/css/home.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset( 'sliders/nivo_slider/js/jquery.nivo.slider.js') }}"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+                effect: 'boxRandom',                 // Specify sets like: 'fold,fade,sliceDown'
+                //'sliceDownRight','sliceDownLeft','sliceUpRight','sliceUpLeft','sliceUpDown','sliceUpDownLeft','fold','fade',
+                //'boxRandom','boxRain','boxRainReverse','boxRainGrow','boxRainGrowReverse'
+                slices: 15,                     // For slice animations
+                boxCols: 8,                     // For box animations
+                boxRows: 4,                     // For box animations
+                animSpeed: 900,                 // Slide transition speed
+                pauseTime: 5000,                 // How long each slide will show
+                startSlide: 0,                     // Set starting Slide (0 index)
+                directionNav: true,             // Next & Prev navigation
+                controlNav: true,                 // 1,2,3... navigation
+                controlNavThumbs: false,         // Use thumbnails for Control Nav
+                controlNavAbove: true,         // Place navigation above the slider or not
+                directionNavOutside: true,    // Place direction control outside the slider or not
+                pauseOnHover: true,             // Stop animation while hovering
+                manualAdvance: false,             // Force manual transitions
+                prevText: 'Prev',                 // Prev directionNav text
+                nextText: 'Next',                 // Next directionNav text
+                randomStart: false,             // Start on a random slide
+                distort: true,
+                captionAnimAuto: false,
+                captionAnim: function(){},
+                beforeChange: function(){},     // Triggers before a slide transition
+                afterChange: function(){},         // Triggers after a slide transition
+                slideshowEnd: function(){},     // Triggers after all slides have been shown
+                lastSlide: function(){},         // Triggers when last slide is shown
+                afterLoad: function(){}         // Triggers when slider has loaded
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        {#<h1 class="brand-heading">Grayscale</h1>#}
+                        {#<p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>#}
+                        {#-------#}
+                        {#Slider#}
+                        <div class="slider-wrapper theme-cbe">
+                            <div id="slider" class="nivoSlider">
+                                {% for new in news  %}
+                                    <img src="{{ asset( 'uploads/news_images/') ~ new.mediafile }}" title="#caption{{ loop.index }}" />
+                                {% endfor %}
+                                {#<img src="{{ asset( 'sliders/slidershock/demo/img/1.jpg') }}" data-thumb="" alt="" title="#caption1" />#}
+                                {#<img src="{{ asset( 'sliders/slidershock/demo/img/2.jpg') }}" data-thumb="" alt="" title="#caption2" />#}
+                                {#<img src="{{ asset( 'sliders/slidershock/demo/img/3.jpg') }}" data-thumb="" alt="" data-transition="" title="#caption3" />#}
+                                {#<img src="{{ asset( 'sliders/slidershock/demo/img/4.jpg') }}" data-thumb="" alt="" title="#caption4" />#}
+                            </div>
+                            {% for new in news  %}
+                                <div id="caption{{ loop.index }}" class="nivo-html-caption">
+                                    <div class="slide_cat"></div>
+                                    <div class="slide_panel">
+                                        <div class="slide_title slide_info_box"><span>{{ new.titre }}</span></div>
+                                        <div class="slide_description slide_info_box">
+                                            <p>{{ new.description }}</p>
+                                            <a href="" class="see_more">voir plus...</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {#<div id="caption1" class="nivo-html-caption">#}
+                                {#<div class="slide_cat"></div>#}
+                                {#<div class="slide_panel">#}
+                                    {#<div class="slide_title slide_info_box"><span>CONCERT : GUSTAVE FRANCISQUE</span></div>#}
+                                    {#<div class="slide_description slide_info_box">#}
+                                        {#<p>Hommage aux musiciens et aux pères disparus.</p>#}
+                                        {#<p>Retrouvez en guest : Philippe Rastocle, Murielle Lagarde, Isauty Roger, Mister Lof, Guy Vadeleiix, Michel Thimon ...</p>#}
+                                        {#<a href="" class="see_more">voir plus...</a>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                            {#<div id="caption2" class="nivo-html-caption">#}
+                                {#<div class="slide_cat"></div>#}
+                                {#<div class="slide_panel">#}
+                                    {#<div class="slide_title slide_info_box">CHANTE NOEL</div>#}
+                                    {#<div class="slide_description slide_info_box">#}
+                                        {#<p>Chants de quantique.</p>#}
+                                        {#<p>Venez chanté noel avec nous : Gustave, Raphael, Laurent, et bien d'autres ...</p>#}
+                                        {#<a href="" class="see_more">voir plus...</a>#}
+                                    {#</div>#}
+                                {#</div>#}
+                            {#</div>#}
+                        </div>
+                        {#Slider_End#}
+                        {#----------#}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="moreifno">
+            <a href="#hello" class="btn btn-warning page-scroll">
+                <i class=" animated">En savoir +</i>
+            </a>
+        </div>
+    </header>
+
+    <section id="hello" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Qui sommes nous ?</h2>
+                <p>L'association musicale Cuivres et Bois d'&Eacute;bène (CBE) a été fondée en 2012 par monsieur <a href="http://www.martinique.franceantilles.fr/actualite/diaporamas/retour-aux-sources-reussi-pour-gustave-francisque-243013.php" target="_blank">Gustave Francisque</a> afin s'enseigner l'art du clarinettiste.</p>
+                <p>L'association CBE est soumise &agrave; la loi 1901...</p>
+                <a id="plusdinfo" href="#plusdinfo" class="btn btn-info page-scroll">
+                    <i class=" animated">+ d'infos</i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; CBE 2015</p>
+        </div>
+    </footer>
+
+    <div id="trebleclef"><a href="{{ path('fos_user_security_login') }}"></a></div>
+{% endblock %}

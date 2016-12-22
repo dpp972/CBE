@@ -1,0 +1,45 @@
+<?php
+
+namespace Dpp\Cbe\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Loggable
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+abstract class Loggable
+{
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_creation", type="datetime")
+     */
+    private $dateCreation;
+
+    /**
+     * Set dateCreation
+     *
+     * @param \DateTime $usr
+     * @return Loggable
+     */
+    public function setDateCreation($dateC)
+    {
+        $this->usr = $dateC;
+
+        return $this;
+    }
+
+    /**
+     * Get usr
+     *
+     * @return \DateTime 
+     */
+    public function getDateCreation()
+    {
+        return $this->usr;
+    }
+}

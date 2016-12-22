@@ -1,0 +1,13 @@
+{% extends 'DppCbeMainBundle:_Bases:base_main_grayscale.html.twig' %}
+
+{% block body %}
+    <div id="bg_shadow"></div>
+
+    {#{{ include('DppCbeMainBundle:_Components:main_title.html.twig') }}#}
+
+    {#{{ include('DppCbeMainBundle:_Components:main_navbar.html.twig') }}#}
+    {{ include('DppCbeMainBundle:_Components:header.html.twig') }}
+
+    {% block content %}{% endblock %}
+
+{% endblock %}

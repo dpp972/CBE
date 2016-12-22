@@ -1,0 +1,11 @@
+{% extends templateName %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset( 'cbe/css/page.css') }}" />
+{% endblock %}
+
+{% block content %}
+    <h2>{{ pageData.content.titre ? pageData.content.titre : pageData.page.libelle }}</h2>
+    <p>{{ pageData.content.contenu }}</p>
+{% endblock %}

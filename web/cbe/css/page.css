@@ -1,0 +1,39 @@
+#maintitle{
+    color: #fff !important;
+}
+
+body{
+    background: url( '../images/groupe_cbe.jpg') no-repeat;
+    background-size: cover;
+}
+
+body #bg_shadow{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #828282;
+    opacity: 0.3;
+    -moz-opacity: 0.3;
+    filter:alpha(opacity=30);
+}
+
+body #bg_shadow:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: url( '../images/motif_h_strie.png') repeat;
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    filter:alpha(opacity=80);
+}

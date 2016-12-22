@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Prueba slider</title>  
+	<link rel='stylesheet' href='css/slider_multiple.css' />  
+</head>
+  <body>
+    <div id='my_carousel_ct' class='carousel-container'>  
+      <div id="my_carousel_1" class="carousel slide">
+        <!-- Carousel items -->
+        <div id="my_carousel_2" class="carousel-inner rs-slider">
+          <div class="item active">
+            <div class="ts_border">
+              <img src="demo/img/1.jpg" />
+              <div class="carousel-caption">
+                <h4>Lorem ipsum</h4>
+                  <p class="ts_txt">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/2.jpg" />
+              <div class="carousel-caption">
+                <h4>Lorem ipsum 2</h4>
+                  <p class="ts_txt">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>   
+		  <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/3.jpg" />
+              <div class="carousel-caption">
+                <h4>My image 3</h4>
+                  <p class="ts_txt">
+                    <p>This is my img 3 
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div> 
+		  <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/4.jpg" />
+              <div class="carousel-caption">
+                <h4>My image 4</h4>
+                  <p class="ts_txt">
+                    <p>My image number 4
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/5.jpg" />
+              <div class="carousel-caption">
+                <h4>My image 5</h4>
+                  <p class="ts_txt">
+                    <p>This is my image number 5
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>
+		  <div class="item">
+            <div class="ts_border">
+              <img src="demo/img/6.jpg" />
+              <div class="carousel-caption">
+                <h4>My image 6</h4>
+                  <p class="ts_txt">
+                    <p>This is my image number 6
+                    </p>
+                  </p>
+              </div>
+            </div>
+          </div>           
+                                     
+        </div>      
+        <!-- Carousel nav -->
+        <a class="carousel-custom" href="#my_carousel_1" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-custom" href="#my_carousel_1" data-slide="next">&rsaquo;</a>
+      </div>	
+    </div>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
+    <script type='text/javascript' src='js/wpts_slider_multiple.js'></script>
+    <script>
+      jQuery(document).ready(function(e) {
+         jQuery('#my_carousel_ct').tsSlider({
+           thumbs:''
+          , width:'600'
+          , showText: true 
+          , autoplay:15000
+          , imgWidth: 100
+          , imgHeight: 100
+          , imgMarginTop: 0
+          , imgMarginLeft: 0
+          , squared: true 
+          , textSquarePosition: 4 
+          , textPosition: 'top'
+          , imgAlignment: 'Center'
+          , textColor: 'F00'
+          , skin: 'transparent'
+          , arrows:'ts-arrow-1'
+          , sliderHeight: 400 
+          , effects:''
+					, titleBold: 'false'
+					, titleItalic: 'false'
+					, textBold: 'true' 
+					, textItalic: 'false' 
+					, textWidth: 90
+          , background_sld:'#FFF'
+          , background_caption:'#000'
+         });		
+      });
+    </script>
+</body>
+</html>

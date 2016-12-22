@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'hanford_scriptregular';
+    src: url('../fonts/roger_white_handford/hanford_-webfont.eot');
+    src: url('../fonts/roger_white_handford/hanford_-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roger_white_handford/hanford_-webfont.woff2') format('woff2'),
+    url('../fonts/roger_white_handford/hanford_-webfont.woff') format('woff'),
+    url('../fonts/roger_white_handford/hanford_-webfont.ttf') format('truetype'),
+    url('../fonts/roger_white_handford/hanford_-webfont.svg#hanford_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mademoiselle_camilleitalic';
+    src: url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.eot');
+    src: url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.woff2') format('woff2'),
+    url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.woff') format('woff'),
+    url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.ttf') format('truetype'),
+    url('../fonts/mademoiselle_camille/mademoiselle_camille-webfont.svg#mademoiselle_camilleitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'geosanslightregular';
+    src: url('../fonts/geo_sans_light/geosanslight-webfont.eot');
+    src: url('../fonts/geo_sans_light/geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/geo_sans_light/geosanslight-webfont.woff2') format('woff2'),
+    url('../fonts/geo_sans_light/geosanslight-webfont.woff') format('woff'),
+    url('../fonts/geo_sans_light/geosanslight-webfont.ttf') format('truetype'),
+    url('../fonts/geo_sans_light/geosanslight-webfont.svg#geosanslightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opificioregular';
+    src: url('../fonts/opificio/opificio-webfont.eot');
+    src: url('../fonts/opificio/opificio-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/opificio/opificio-webfont.woff2') format('woff2'),
+    url('../fonts/opificio/opificio-webfont.woff') format('woff'),
+    url('../fonts/opificio/opificio-webfont.ttf') format('truetype'),
+    url('../fonts/opificio/opificio-webfont.svg#opificioregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

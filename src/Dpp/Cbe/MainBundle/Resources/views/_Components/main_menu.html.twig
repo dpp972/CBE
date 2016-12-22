@@ -1,0 +1,7 @@
+{% for rubrique in menu %}
+    <li>
+        <a href="{{ path('main_common_page', { 'pathurl': rubrique.pathurl }) }}">
+            {{ rubrique.libelle|cbe_menuLink|nl2br }}
+        </a>
+    </li>
+{% endfor %}

@@ -1,0 +1,27 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+    model_mgr.menu.order_col_name: position
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    model_mgr:
+        class: Dpp\Cbe\MainBundle\ModelManager
+        arguments: []
+
+    common_function_mgr:
+        class: Dpp\Cbe\MainBundle\CommonFunctionManager
+        arguments: []
+
+    redirect.after.login:
+        class: Dpp\Cbe\MainBundle\Redirection\AfterLoginRedirection
+        arguments: [@router]
+
+    cbe.twig_extension:
+        class: Dpp\Cbe\MainBundle\Twig\CbeExtension
+        public: false
+        tags:
+            - { name: twig.extension }
